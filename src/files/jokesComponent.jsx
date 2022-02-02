@@ -18,8 +18,8 @@ const Jokescomponent = () => {
         setVotedJoke(false);
         getJokes()
             .then((response) => {
-            console.log('Random joke', response.value);
-            setJoke(response.value);
+            console.log('Random joke', response.data.value);
+            setJoke(response.data.value);
             jokes.push(joke);
         })
         .catch((error) => {
